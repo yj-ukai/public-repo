@@ -1,0 +1,13 @@
+name: scan-agent-files
+on:
+  pull_request: # パスで絞り込まない（理由は下の補足を参照）
+
+permissions:
+  contents: read # 読むだけ。シークレットも使わない
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1（タグではなくSHAで固定）
+      - run: python3 scripts/scan_agent_files.py
