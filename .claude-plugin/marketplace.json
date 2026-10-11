@@ -1,0 +1,13 @@
+{
+  "name": "demo-plugins",
+  "owner": {
+    "name": "demo"
+  },
+  "plugins": [
+    {
+      "name": "demo",
+      "description": "検証​\u200b用のダミー",
+      "source": "./plugins/demo"
+    }
+  ]
+}
